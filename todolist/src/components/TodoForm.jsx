@@ -16,7 +16,12 @@ export default function TodoForm() {
 
 
       <form onSubmit={handleSubmit}>
-            <input name='input' type="text" onChange={handleInputChange}  className="text" />
+            <input name='input' 
+            type="text" 
+            onChange={handleInputChange}  
+            placeholder='Enter todo here'/>
+            <button type="button"> Add a Todo</button>
+            className="text"
 
       </form>
           
