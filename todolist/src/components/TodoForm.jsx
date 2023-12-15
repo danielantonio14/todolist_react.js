@@ -1,16 +1,20 @@
 import React from 'react'
 
 
-const handleSubmit = () => {
-  console.log('teste');
 
-}
-
-const handleInputChange = () => {
-  console.log('teste2');
-}
 
 export default function TodoForm() {
+
+  const handleSubmit = () => {
+    console.log('teste');
+  
+  }
+  
+  const handleInputChange = () => {
+    console.log('teste2');
+  }
+
+  
   return (
     <div> 
 
