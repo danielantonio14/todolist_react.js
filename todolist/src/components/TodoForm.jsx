@@ -1,30 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 
 
 export default function TodoForm() {
+  const handleInputChange = (event) => {
+    event.preventDefault()
+  }
 
+  const [InputValue,setInputValue] = useState("");
   const handleSubmit = (event) => {
-    event.preventDefault(); 
+    const {value} = event.target;
+    setInputValue(value);
   
   }
   
-  const handleInputChange = () => {
-    console.log('teste2');
-  }
+ 
 
 
   return (
     <div> 
 
 
-      <form onSubmit={handleSubmit}>
-            <input name='input' 
+      <form className='todo-form' onSubmit={handleSubmit}>
+            <input 
+            name='input' 
             type="text" 
+            className='todo-input'
+            value={InputValue}
             onChange={handleInputChange}  
             placeholder='Enter todo here'/>
-            <button type="submit"> Add a Todo</button>
+            <button className='todo-button' type="submit"> Add a Todo</button>
             
 
       </form>
