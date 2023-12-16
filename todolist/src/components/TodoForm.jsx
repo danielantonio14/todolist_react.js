@@ -5,8 +5,8 @@ import React from 'react'
 
 export default function TodoForm() {
 
-  const handleSubmit = () => {
-    console.log('teste');
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
   
   }
   
@@ -14,7 +14,7 @@ export default function TodoForm() {
     console.log('teste2');
   }
 
-  
+
   return (
     <div> 
 
@@ -24,8 +24,8 @@ export default function TodoForm() {
             type="text" 
             onChange={handleInputChange}  
             placeholder='Enter todo here'/>
-            <button type="button"> Add a Todo</button>
-            className="text"
+            <button type="submit"> Add a Todo</button>
+            
 
       </form>
           
